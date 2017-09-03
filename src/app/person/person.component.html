@@ -1,0 +1,22 @@
+
+<h2>
+  {{title}}
+</h2>
+<table class="table">
+    <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let person of personList">
+          <td>{{person.id}}</td>
+          <td>{{person.name}}</td>
+          <td>{{person.job}}</td>
+      </tr>
+    </tbody>
+</table>
+
+<button class="btn btn-primary" (click)="hideDiv()">Toggle</button>

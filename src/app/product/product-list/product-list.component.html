@@ -1,0 +1,46 @@
+<!--One way data binding  -->
+<input type="text" (focus)="updateTitle()" value="{{title}}" />
+<span>{{title}}</span>
+<br>
+<br>
+<span>{{num}}</span>
+<br>
+<button (click)="incrementNumber()">incrementNumber</button>
+<button (click)="decrementNumber()">decrementNumber</button>
+
+<h2>Product List Table 1</h2>
+<table class="table">
+    <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+          <th>Product Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let product of productList">
+          <td>{{product.id}}</td>
+          <td>{{product.product_name}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.qty}}</td>
+      </tr>
+    </tbody>
+</table>
+
+<h2>{{product_title}}</h2>
+<table class="table">
+    <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Product Color</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let product of productList1">
+          <td>{{product.id}}</td>
+          <td>{{product.product_color}}</td>
+      </tr>
+    </tbody>
+</table>

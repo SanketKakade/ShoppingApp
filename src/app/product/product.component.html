@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<!--Property binding with box syntax -->
+<div [innerHtml]="title"></div>
+<!--Event binding  -->
+<button (click)="updateTitle()">Send</button>
+{{productList}}
+<!--Instead of ngif, hidden property can also be used to hide the div. However, hidden property will
+    keep the div in the DOM and makes it's css property display:none. ngif will remove the entire element 
+    from the DOM.-->
+<div *ngIf="isVisible">
+
+</div>
+<app-product-list [productList]="productData" [productList1]="productInfo" [product_title]=product_title></app-product-list>

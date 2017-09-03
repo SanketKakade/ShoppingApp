@@ -1,0 +1,41 @@
+<h1>Welcome {{name}}</h1>
+<!--to bind property we can use innerText  -->
+
+<!--hidden property will keep the element in the dom  -->
+<!-- <div [innerText]="name" [hidden]="isVisible"></div> -->
+
+<!--ng if directive will remove the element from the dom  -->
+<!--ng if is a structural directive  -->
+<div [innerText]="toggleText" *ngIf="isVisible"></div>
+
+<!--to disable button we can make use of disabled property  -->
+<button [disabled]="true">Disabled button</button>
+
+<!--ng switch structural directive  -->
+<div [ngSwitch] = "isVisible">
+    <div *ngSwitchCase="false">
+        This is the div when value is false
+    </div>
+    <div *ngSwitchCase="true">
+        This is the div when value is true
+    </div>
+</div>
+
+<button (click) ="toggle()">toggle button</button>
+<h2>Customer Table</h2>
+<table class="table">
+    <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let cust of custList">
+          <td>{{cust.id}}</td>
+          <td>{{cust.name}}</td>
+          <td>{{cust.address}}</td>
+      </tr>
+    </tbody>
+</table>
